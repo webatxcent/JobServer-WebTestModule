@@ -42,10 +42,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="XCENT.JobServer.Abstract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\XCENT.JobServer.Plugin.6.0.0-alpha.20210215\lib\net461\XCENT.JobServer.Abstract.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\XCENT.JobServer.Abstract.dll</HintPath>
     </Reference>
     <Reference Include="XCENT.JobServer.Plugin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\XCENT.JobServer.Plugin.6.0.0-alpha.20210215\lib\net461\XCENT.JobServer.Plugin.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\XCENT.JobServer.Plugin.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
