@@ -22,16 +22,14 @@ namespace ModuleProject
     [Flags]
     public enum Days
     {
-        Sunday, 
-        Monday, 
-        Tuesday, 
-        Wednesday,
-        Thursday,
-        Friday, 
-        Saturday
+        Sunday = 1, 
+        Monday = 2, 
+        Tuesday = 4, 
+        Wednesday = 8 ,
+        Thursday = 16,
+        Friday = 32, 
+        Saturday = 64
     }
-
-
 
     public class WebModule : ModuleBase
     {
@@ -47,9 +45,11 @@ namespace ModuleProject
         [ParamDef( Caption: "Wait", Description: "Wait (seconds)", ModuleParameterDirection: ModuleParameterDirection.In, IsRequired: true, Default: "15", MinValue: 0, MaxValue: 120 )]
         public int Wait { get; set; }
 
+        [ParamDef( Caption: "Optional Date", Description: "Just an optional date", ModuleParameterDirection: ModuleParameterDirection.In, IsRequired: false )]
+        public DateTime? OptionalDate { get; set; }
+
         [ParamDef(Caption: "Color Days", Description: "Color Days", ModuleParameterDirection: ModuleParameterDirection.Out )]
         public string  ColorDays { get; set; }
-
 
         public WebModule() : base("WebColorModule", "WEB", "Color Day Module", null, Guid.Parse("298D7FB6-0C57-4023-89BB-79D7BF641BAC"))
         { // null means that there is no limit to concurrently running modules; replace with number to set limit
